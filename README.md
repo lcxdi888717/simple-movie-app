@@ -16,11 +16,10 @@ This is a simple movie application contains following features built with create
 - Create-react-app
 - Lodash
 - Ant Design
-- React Router
 - React Redux
 - Classnames
 
-## Resources
+## Thanks to
 
-- Movies Data
-  I'm using a script to access DOM to grab real movies data from Event Cinema website. The script can be find here.
+- Sample Movies Data
+  The sample data is downloaded from Event cinema website
