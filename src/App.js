@@ -1,9 +1,9 @@
-import { Layout } from "antd";
-import React, { Component } from "react";
+import { Layout } from 'antd';
+import React, { Component } from 'react';
 
-import { LeftSider, MoviesList } from "./views";
+import { LeftSider, MoviesList } from './views';
 
-const { Sider, Header, Content, Footer } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 class App extends Component {
   render() {

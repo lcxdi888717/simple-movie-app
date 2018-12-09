@@ -1,4 +1,4 @@
-import { SET_TEXT } from './actionTypes';
+import { SET_TEXT, REMOVE_MOVIE, ADD_MOVIE } from './actionTypes';
 
 const initialState = {
   data: [
@@ -29,6 +29,18 @@ const movies = (state = initialState, action) => {
       return {
         ...state,
         searchText
+      };
+
+    case REMOVE_MOVIE:
+      const { movieId } = action.payload;
+      return {
+        ...state,
+        data: state.data.filter(m => m.id !== movieId)
+      };
+
+    case ADD_MOVIE:
+      return {
+        ...state
       };
 
     default:

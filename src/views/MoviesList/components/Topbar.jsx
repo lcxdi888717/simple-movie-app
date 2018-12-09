@@ -18,14 +18,14 @@ class Topbar extends PureComponent {
     const { searchText } = this.props;
     return (
       <Row>
-        <Col xs={24} sm={6}>
+        <Col xs={24} sm={12}>
           <Search
             onChange={this.handleTextChange}
             value={searchText}
             placeholder="Search movie by name"
           />
         </Col>
-        <Col xs={24} sm={6} push={12}>
+        <Col xs={24} sm={6} push={6}>
           <Button onClick={this.handleAddNewClick}>
             <Icon type="plus" />
             New Movie
