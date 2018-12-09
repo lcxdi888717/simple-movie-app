@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import React, { Component } from "react";
 
-import { LeftSider } from "./views";
+import { LeftSider, MoviesList } from "./views";
 
 const { Sider, Header, Content, Footer } = Layout;
 
@@ -13,9 +13,10 @@ class App extends Component {
           <LeftSider />
         </Sider>
         <Layout>
-          <Header>header</Header>
-          <Content>content</Content>
-          <Footer>footer</Footer>
+          <Content>
+            <MoviesList />
+          </Content>
+          <Footer>simple-movie-app</Footer>
         </Layout>
       </Layout>
     );
