@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import Movie from './Movie';
 import Enums from '../../../configs/EnumsManager';
 import { removeMovie } from '../flow/actions';
+import Movie from './Movie';
 
 class List extends PureComponent {
   handleCloseClick = movieId => this.props.removeMovie(movieId);
@@ -22,7 +22,7 @@ class List extends PureComponent {
     return data.filter(
       m =>
         m.title.toLowerCase().indexOf(text) > -1 &&
-        (activeId === Enums.GenreAllId || m.genres === activeId)
+        (activeId === Enums.GenreAllId || m.genre === activeId)
     );
   };
 

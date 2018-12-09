@@ -1,38 +1,42 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { setActiveGenre } from '../flow/actions';
+import classNames from 'classnames/bind';
+import styles from '../index.css';
+
+const cx = classNames.bind(styles);
 
 class Genres extends PureComponent {
-  handleGenreClick = (genreId) => {
-    console.log('clicked genre -> ', genreId);
-    // dispatch set active
-    this.props.setActiveGenre(genreId);
-  };
+  handleGenreClick = genreId => this.props.setActiveGenre(genreId);
 
   render() {
     const { genres } = this.props;
     return (
       <div className="genres">
         <h3>Genres</h3>
-        {genres.map((g) => (
-          <div
-            key={g.id}
-            className={g.isActive ? 'active' : ''}
-            onClick={() => this.handleGenreClick(g.id)}
-          >
-            {g.title}
-          </div>
-        ))}
+        <ul>
+          {genres.map(g => (
+            <li
+              key={g.id}
+              className={cx('cursor-pointer', {
+                active: g.isActive
+              })}
+              onClick={() => this.handleGenreClick(g.id)}
+            >
+              {g.title}
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
 }
 
 const mapStateToProps = ({ genres }) => ({
-  genres,
+  genres
 });
 const mapDispatchToProps = {
-  setActiveGenre,
+  setActiveGenre
 };
 
 export default connect(

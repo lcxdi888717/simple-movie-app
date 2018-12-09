@@ -16,7 +16,9 @@ class App extends Component {
           <Content>
             <MoviesList />
           </Content>
-          <Footer>simple-movie-app</Footer>
+          <Footer>
+            Copyright © 2018 Simple Movie App, All Rights Reserved
+          </Footer>
         </Layout>
       </Layout>
     );

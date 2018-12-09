@@ -1,4 +1,4 @@
-import { SET_TEXT, REMOVE_MOVIE, ADD_MOVIE } from './actionTypes';
+import { ADD_MOVIE, REMOVE_MOVIE, SET_TEXT } from './actionTypes';
 
 const initialState = {
   data: [
@@ -39,8 +39,14 @@ const movies = (state = initialState, action) => {
       };
 
     case ADD_MOVIE:
+      const { values } = action.payload;
+      const newMovie = {
+        ...values,
+        id: Date.now()
+      };
       return {
-        ...state
+        ...state,
+        data: [...state.data, newMovie]
       };
 
     default:

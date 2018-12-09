@@ -1,4 +1,23 @@
 h1,
+h3,
 .leftSider {
   color: #fff;
+}
+
+.leftSider {
+  padding: 10px 20px;
+}
+
+.leftSider ul {
+  padding-left: 0;
+}
+
+.leftSider li {
+  text-transform: capitalize;
+  list-style: none;
+  line-height: 24px;
+}
+
+.leftSider li.active {
+  color: #09c;
 }

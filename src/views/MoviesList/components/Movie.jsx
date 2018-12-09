@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Icon } from 'antd';
+import PropTypes from 'prop-types';
+import React from 'react';
 import '../index.css';
 
 const defaultProps = {
+  description: '-',
   onCloseClick: null
 };
 const propTypes = {
   title: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   genre: PropTypes.number.isRequired,
   onCloseClick: PropTypes.func
 };
@@ -26,12 +27,12 @@ const Movie = ({ title, poster, description, genre, onCloseClick }) => (
       <img className="cover" src={poster} alt={title} />
       <div className="info">
         <label>Description:</label>
-        <p>{description}</p>
+        <p className="truncate">{description}</p>
         <label>Genre:</label>
         <p>{genre}</p>
       </div>
     </div>
-    <div>{title}</div>
+    <div className="title truncate">{title}</div>
   </div>
 );
 

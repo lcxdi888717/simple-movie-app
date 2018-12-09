@@ -1,28 +1,29 @@
 import { SET_GENRE } from './actionTypes';
+import Enums from '../../../configs/EnumsManager';
 
 const initialState = [
   {
-    id: 1,
+    id: Enums.GenreAllId,
     title: 'all',
-    isActive: true,
+    isActive: true
   },
   {
     id: 2,
     title: 'comedy',
-    isActive: false,
+    isActive: false
   },
   {
     id: 3,
     title: 'romantic',
-    isActive: false,
-  },
+    isActive: false
+  }
 ];
 
 const genres = (state = initialState, action) => {
   switch (action.type) {
     case SET_GENRE:
       const { genreId } = action.payload;
-      return state.map((g) => {
+      return state.map(g => {
         g.isActive = g.id === genreId;
         return g;
       });

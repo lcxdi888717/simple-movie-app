@@ -1,4 +1,4 @@
-import LeftSider from "./LeftSider";
-import MoviesList from "./MoviesList";
+import LeftSider from './LeftSider';
+import MoviesList from './MoviesList';
 
 export { LeftSider, MoviesList };
