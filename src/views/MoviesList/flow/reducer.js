@@ -4,18 +4,20 @@ const initialState = {
   data: [
     {
       id: 1,
-      title: 'a',
+      title: 'Mortal Engines',
       poster:
         'https://cdn.eventcinemas.com.au/cdn/resources/movies/12438/images/largeposter.jpg',
-      description: 'a desc',
-      genre: 1
+      description:
+        'Many years after the "Sixty Minute War," cities survive a now desolate Earth by moving around on giant wheels attacking and devouring smaller towns to replenish their resources',
+      genre: 3
     },
     {
       id: 2,
-      title: 'b',
+      title: 'Creed II',
       poster:
         'https://cdn.eventcinemas.com.au/cdn/resources/movies/12270/images/largeposter.jpg',
-      description: 'b desc',
+      description:
+        'Adonis Creed tries to seek revenge when he goes toe to toe with the man who killed his father.',
       genre: 2
     }
   ],

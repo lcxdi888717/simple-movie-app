@@ -4,6 +4,7 @@ import React from 'react';
 import '../index.css';
 
 const defaultProps = {
+  genre: { title: '-' },
   description: '-',
   onCloseClick: null
 };
@@ -11,7 +12,9 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   description: PropTypes.string,
-  genre: PropTypes.number.isRequired,
+  genre: PropTypes.shape({
+    title: PropTypes.string.isRequired
+  }),
   onCloseClick: PropTypes.func
 };
 
@@ -27,9 +30,11 @@ const Movie = ({ title, poster, description, genre, onCloseClick }) => (
       <img className="cover" src={poster} alt={title} />
       <div className="info">
         <label>Description:</label>
-        <p className="truncate">{description}</p>
+        <p className="truncate" title={description}>
+          {description}
+        </p>
         <label>Genre:</label>
-        <p>{genre}</p>
+        <p>{genre.title}</p>
       </div>
     </div>
     <div className="title truncate">{title}</div>

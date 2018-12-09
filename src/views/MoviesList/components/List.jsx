@@ -38,6 +38,7 @@ class List extends PureComponent {
           <Movie
             key={m.id}
             {...m}
+            genre={genres.find(g => g.id === m.genre)}
             onCloseClick={() => this.handleCloseClick(m.id)}
           />
         ))}
